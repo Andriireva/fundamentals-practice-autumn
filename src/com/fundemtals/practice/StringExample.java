@@ -55,11 +55,12 @@ public class StringExample {
         printArray(getWordsLength(sentence));
 
         // There are 2 ways of init the string
-        String str1 = "ABC";
+        String str1 = "ABC"; // it creat this value in string pool
         String str2 = "ABC";
         String str3 = new String("ABC");
         System.out.println("Compare 2 strings " + str1.equals(str3)); // IF u want to compare String you MUST use equals method
-        System.out.println("Compare 2 strings via == " + (str1 == str3));
+        System.out.println("Compare 2 strings created inline " + (str1 == str2));
+        System.out.println("Compare 2 strings via == " + (str1 == str3)); // == it compares the references in memory
 
 //        String.toLowerCase();
 //        double value = Math.sqrt(49.0d);
