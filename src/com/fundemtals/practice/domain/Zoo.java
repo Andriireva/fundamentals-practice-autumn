@@ -62,5 +62,58 @@ public class Zoo {
 
         Animal elephant = new Animal("Dambo", 1, 4, 0L, false);
         System.out.println("elephant representation is " + elephant.getAnimalRepresentation());
+
+        System.out.println("===== Inheritance =======");
+        Mammal lion = new Mammal("Dambo", 1, 4, 0L, false, 8);
+        lion.setName("Simba");
+        System.out.println("Lion name is " + lion.getName());
+        System.out.println("Lion legs number " + lion.getLegsNumber());
+        System.out.println("Lion pr period " + lion.getPregnantPeriod());
+        System.out.println("Lion presentation " + lion.getAnimalRepresentation());
+
+
+        // You can declare a variable of type X and the value can be any type that is X or that is inherited from X
+        // BUT NOT WISE VERSA
+        Animal giraffe = new Mammal("Fie", 4, 4, 0L, false, 15);
+        // giraffe.getPregnantPeriod(); the actual value Type is Mammal,
+        // but the declared type is "shorter" or is a generic (parent)
+        System.out.println("giraffe name is " + giraffe.getName());
+
+        Animal flipper = new Fish("Flipper", 4, 0, 0L, false);
+
+        // It returs true if 1st value argument type is belong to 2nd argument
+        if (giraffe instanceof Mammal) {
+            Mammal mammal = ((Mammal)giraffe); // this operation call cast
+            // giraffe.getPregnantPeriod();
+            int pregnantPeriod = mammal.getPregnantPeriod();
+            System.out.println("!!! giraffe pregnantPeriod is " + pregnantPeriod);
+        }
+
+        Mammal humster = new Mammal("Small", 4, 4, 0L, false);
+        Animal[] myFavoriteAnimals = {dog, giraffe, cat, flipper, humster, flipper};
+        String[] myFavoriteAnimalNames = getMammalNames(myFavoriteAnimals);
+
+        for (int i = 0; i < myFavoriteAnimalNames.length; i++) {
+            System.out.println(myFavoriteAnimalNames[i]);
+        }
+    }
+
+    public static String[] getMammalNames(Animal[] animals) {
+        int mammalCount = 0;
+        for (int i = 0; i < animals.length; i++) {
+            if (animals[i] instanceof Mammal) {
+                mammalCount++;
+            }
+        }
+
+        String[] names = new String[mammalCount];
+        int mammalCounter = 0;
+        for (int i = 0; i < animals.length; i++) {
+            if (animals[i] instanceof Mammal) {
+                names[mammalCounter] = animals[i].getName();
+                mammalCounter++;
+            }
+        }
+        return names;
     }
 }

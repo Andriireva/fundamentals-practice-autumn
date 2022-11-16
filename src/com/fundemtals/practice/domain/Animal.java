@@ -6,8 +6,9 @@ public class Animal {
     // We can declare a constructor
     // we can declare a method
     // Variables are something that explain a state of current instance of this class
-    // It is best practice making ALL field private and add setter and/or getters
-    private String name; // This variable will be used as name of particular Animal
+    // It is best practice making ALL field private (or protected) and add setter and/or getters
+    // Protected are visible in this class and in child class
+    protected String name; // This variable will be used as name of particular Animal
     private int age; // it is age of particular Animal
     private Integer legsNumber; // Integer is wrapper to int
     private Long childrenNumber; // example of long wrapper
@@ -84,6 +85,7 @@ public class Animal {
     // If Class does not directly declare default constructor, java during compilation add it
     // if non-default constructor is added, then default constructor will not be automatically added
     public Animal() {
+//        System.out.println("Animal default constructor is called"); It is just for debugging,
     }
 
     // it is a constructor, it does not have return type,
@@ -93,16 +95,20 @@ public class Animal {
     }
 
     public Animal(String name, int age, Integer legsNumber, Long childrenNumber, Boolean hasWool) {
+        System.out.println("Animal full constructor is called");
         this.name = name;
         this.age = age;
         this.legsNumber = legsNumber;
         this.childrenNumber = childrenNumber;
         this.hasWool = hasWool;
+//        privateMethod("Animal");
     }
 
     //First Method
     public String getAnimalRepresentation() {
         String representationResult = name + " " + age;
+        privateMethod("Animal");
+        protectedMethod("Animal");
         if (legsNumber != null) { // compare is variable not null
             representationResult = representationResult + " " + legsNumber;
         }
@@ -113,6 +119,14 @@ public class Animal {
             representationResult = representationResult + " " + hasWool;
         }
         return representationResult;
+    }
+
+    private void privateMethod(String str) {
+        System.out.println("privateMethod is called from " + str);
+    }
+
+    protected void protectedMethod(String str) {
+        System.out.println("protectedMethod is called from " + str);
     }
 
 }
