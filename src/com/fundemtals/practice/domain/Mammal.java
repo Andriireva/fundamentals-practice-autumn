@@ -32,4 +32,10 @@ public class Mammal extends Animal {
     public void setPregnantPeriod(Integer pregnantPeriod) {
         this.pregnantPeriod = pregnantPeriod;
     }
+
+    // package visibility can be applied to classes, fields, method, constructors
+    // this method has package visibility
+    void packageMethod() {
+        System.out.println("packageMethod");
+    }
 }

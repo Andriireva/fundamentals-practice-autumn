@@ -96,6 +96,23 @@ public class Zoo {
         for (int i = 0; i < myFavoriteAnimalNames.length; i++) {
             System.out.println(myFavoriteAnimalNames[i]);
         }
+
+        Dog dog4 = new Dog("Rex", 4, 4, 0L, false);
+        Fish fish = new Fish("Fishie", 4, 4, 0L, false);
+        Fish fish2 = new Fish("Fishie2", 4, 4, 0L, false);
+
+        dog4.packageMethod();
+
+        Moveable moveable = dog4;
+        moveable.move(44, 33);
+
+
+
+        Moveable[] animalsThatMoves = { dog4, fish, fish2 };
+        for (int i = 0; i < animalsThatMoves.length; i++) {
+            Moveable animal = animalsThatMoves[i];
+            animal.move(50, 80);
+        }
     }
 
     public static String[] getMammalNames(Animal[] animals) {
