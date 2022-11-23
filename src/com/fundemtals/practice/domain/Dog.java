@@ -4,8 +4,15 @@ public class Dog extends Mammal implements Moveable, SoundAnimal {
 
     private Double speed;
 
+    public Dog() {
+    }
+
     public Dog(String name, int age, Integer legsNumber, Long childrenNumber, Boolean hasWool) {
         super(name, age, legsNumber, childrenNumber, hasWool);
+    }
+
+    public Dog(int i) {
+        super();
     }
 
     public void move(int x, int y) {

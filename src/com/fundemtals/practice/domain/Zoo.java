@@ -2,8 +2,8 @@ package com.fundemtals.practice.domain;
 
 public class Zoo {
     public static void main(String[] args) {
-        Animal dog = new Animal(8); // it creates a new instance of Animal class, and allocates new space in memory
-        Animal cat = new Animal(); // we want to assign legs number ONLY 1 time
+        Animal dog = new Dog(8); // it creates a new instance of Animal class, and allocates new space in memory
+        Animal cat = new Dog(); // we want to assign legs number ONLY 1 time
         dog.setAge(11);
         dog.setName("Rex");
         //dog.setLegsNumber(6); // it is possible to init Wrapper with its primitive type
@@ -13,7 +13,7 @@ public class Zoo {
         cat.setName("Snow");
         cat.setAge(4);
 
-        Animal cow = new Animal(4);
+        Animal cow = new Cow(4);
 //        cow.age = 3; // = is a reference to space in memory
         // there was no cow.name = to something called
         // When there is no assignment ( using = ) reference point to "nowhere"
@@ -42,7 +42,7 @@ public class Zoo {
         System.out.println("First animal age is " + animals[0].getAge());
 
         Animal dog2 = dog;
-        Animal dog3 = new Animal(4);
+        Animal dog3 = new Dog(4);
         dog3.setName("RexXXXX");
         dog3.setAge(16);
 
@@ -60,7 +60,7 @@ public class Zoo {
         System.out.println("dog representation is " + animalRepresentation);
         System.out.println("Cat representation is " + cat.getAnimalRepresentation());
 
-        Animal elephant = new Animal("Dambo", 1, 4, 0L, false);
+        Animal elephant = new Elephant("Dambo", 1, 4, 0L, false, 5);
         System.out.println("elephant representation is " + elephant.getAnimalRepresentation());
 
         System.out.println("===== Inheritance =======");
@@ -113,6 +113,12 @@ public class Zoo {
             Moveable animal = animalsThatMoves[i];
             animal.move(50, 80);
         }
+
+
+        System.out.println("====  Overriding examples ========");
+        ElephantProvider provider = new ElephantProvider();
+        Elephant animal = provider.getAnimal();
+        System.out.println(animal.getName());
     }
 
     public static String[] getMammalNames(Animal[] animals) {

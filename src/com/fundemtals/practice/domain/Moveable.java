@@ -9,7 +9,7 @@ package com.fundemtals.practice.domain;
 public interface Moveable extends Speed {
 
 
-    public Integer x = 7;
+    public Integer x = 7; // this treated as constants
 
     void move(int x, int y); // it is a method that is declared, it does not have body
     void stop();

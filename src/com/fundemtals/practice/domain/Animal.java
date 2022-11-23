@@ -1,7 +1,7 @@
 package com.fundemtals.practice.domain;
 
 
-public class Animal {
+public abstract class Animal {
     // We can declare a class variable
     // We can declare a constructor
     // we can declare a method
