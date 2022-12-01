@@ -6,6 +6,9 @@ public class Fish extends Animal implements Moveable, SoundAnimal {
 
     private double speed;
 
+    public Fish() {
+    }
+
     public Fish(String name, int age, Integer legsNumber, Long childrenNumber, Boolean hasWool) {
         super(name, age, legsNumber, childrenNumber, hasWool);
     }

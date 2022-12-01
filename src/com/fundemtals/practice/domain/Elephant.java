@@ -6,6 +6,7 @@ public class Elephant extends Mammal {
     public Elephant(String name, int age, Integer legsNumber, Long childrenNumber, Boolean hasWool, int trunkLength) {
         super(name, age, legsNumber, childrenNumber, hasWool);
         this.trunkLength = trunkLength;
+        int k = Speed.IT_IS_CONSTANT;
     }
 
     public int getTrunkLength() {

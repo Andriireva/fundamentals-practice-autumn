@@ -1,5 +1,7 @@
 package com.fundemtals.practice.domain;
 
+import com.fundemtals.practice.domain.finalexample.FinalExample;
+
 // Mammal is a sub class of Animal class
 // Public methods are inherited
 // Constructors are not inherited
@@ -10,6 +12,7 @@ public class Mammal extends Animal {
     private Integer pregnantPeriod;
 
     public Mammal() {
+        String jv = FinalExample.LATEST_JAVA_VERSION;
 //        super();  it is optional, but java will generate super()
     }
 
