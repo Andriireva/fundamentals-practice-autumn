@@ -1,6 +1,8 @@
 package com.fundemtals.practice.domain;
 
 
+import java.time.Instant;
+
 public abstract class Animal {
     // We can declare a class variable
     // We can declare a constructor
@@ -12,6 +14,8 @@ public abstract class Animal {
     private int age; // it is age of particular Animal
     private Integer legsNumber; // Integer is wrapper to int
     private Long childrenNumber; // example of long wrapper
+
+    private Instant dateOfBirth;
 
     // There are 4 access types public, private .....
     // Private access means that this variable (or method.. ) it can be USED only internally
@@ -129,4 +133,11 @@ public abstract class Animal {
         System.out.println("protectedMethod is called from " + str);
     }
 
+    public Instant getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(Instant dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
 }
