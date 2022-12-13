@@ -100,6 +100,9 @@ public abstract class Animal {
 
     public Animal(String name, int age, Integer legsNumber, Long childrenNumber, Boolean hasWool) {
         System.out.println("Animal full constructor is called");
+//        if (age < 0) {
+////            throw new PetException("");
+//        }
         this.name = name;
         this.age = age;
         this.legsNumber = legsNumber;
