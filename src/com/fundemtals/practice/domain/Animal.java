@@ -2,7 +2,9 @@ package com.fundemtals.practice.domain;
 
 
 import java.time.Instant;
+import java.util.Objects;
 
+// Indectly this class (and any other extends Object )
 public abstract class Animal {
     // We can declare a class variable
     // We can declare a constructor
@@ -99,7 +101,7 @@ public abstract class Animal {
     }
 
     public Animal(String name, int age, Integer legsNumber, Long childrenNumber, Boolean hasWool) {
-        System.out.println("Animal full constructor is called");
+//        System.out.println("Animal full constructor is called");
 //        if (age < 0) {
 ////            throw new PetException("");
 //        }
@@ -142,5 +144,18 @@ public abstract class Animal {
 
     public void setDateOfBirth(Instant dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Animal animal = (Animal) o;
+        return getAge() == animal.getAge() && Objects.equals(getName(), animal.getName()) && Objects.equals(getLegsNumber(), animal.getLegsNumber()) && Objects.equals(getChildrenNumber(), animal.getChildrenNumber()) && Objects.equals(getDateOfBirth(), animal.getDateOfBirth()) && Objects.equals(getHasWool(), animal.getHasWool());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getName(), getAge(), getLegsNumber(), getChildrenNumber(), getDateOfBirth(), getHasWool());
     }
 }

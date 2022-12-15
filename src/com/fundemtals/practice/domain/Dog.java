@@ -1,5 +1,7 @@
 package com.fundemtals.practice.domain;
 
+import java.util.Objects;
+
 public class Dog extends Mammal implements Moveable, SoundAnimal {
 
     private Double speed;
@@ -30,7 +32,21 @@ public class Dog extends Mammal implements Moveable, SoundAnimal {
     }
 
     @Override
-    public double getSpeed() {
+    public Double getSpeed() {
         return this.speed;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Dog dog = (Dog) o;
+        return Objects.equals(getSpeed(), dog.getSpeed());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), getSpeed());
     }
 }

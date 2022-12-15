@@ -12,7 +12,7 @@ public class Ant extends Animal implements Moveable {
     }
 
     @Override
-    public double getSpeed() {
-        return 0;
+    public Double getSpeed() {
+        return 0.0;
     }
 }

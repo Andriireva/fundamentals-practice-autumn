@@ -30,7 +30,7 @@ public class Fish extends Animal implements Moveable, SoundAnimal {
     }
 
     @Override
-    public double getSpeed() {
+    public Double getSpeed() {
         return speed;
     }
 }

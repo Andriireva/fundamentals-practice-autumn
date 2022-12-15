@@ -2,6 +2,8 @@ package com.fundemtals.practice.domain;
 
 import com.fundemtals.practice.domain.finalexample.FinalExample;
 
+import java.util.Objects;
+
 // Mammal is a sub class of Animal class
 // Public methods are inherited
 // Constructors are not inherited
@@ -18,7 +20,7 @@ public class Mammal extends Animal {
 
     public Mammal(String name, int age, Integer legsNumber, Long childrenNumber, Boolean hasWool) {
         super(name, age, legsNumber, childrenNumber, hasWool); // super() it calls parent constructor
-        System.out.println("Mammal full constructor is called");
+//        System.out.println("Mammal full constructor is called");
     }
 
     public Mammal(String name, int age, Integer legsNumber, Long childrenNumber, Boolean hasWool, Integer pregnantPeriod) {
@@ -40,5 +42,19 @@ public class Mammal extends Animal {
     // this method has package visibility
     void packageMethod() {
         System.out.println("packageMethod");
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false; //
+        Mammal mammal = (Mammal) o;
+        return Objects.equals(getPregnantPeriod(), mammal.getPregnantPeriod());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), getPregnantPeriod());
     }
 }
