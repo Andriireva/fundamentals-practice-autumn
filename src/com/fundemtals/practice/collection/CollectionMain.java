@@ -7,8 +7,11 @@ public class CollectionMain {
     // Iterable (I) -> Collection (I) -> Set (I) -> HashSet (C)
     //                                           -> TreeSet (C)
     //                                           -> LinkedHashSet (C)
-    //                                -> List (i)
+    //                                -> List (i) -> ArrayList (C)
+    //                                            -> LinkedList (C)
     //                                -> Queue (I)
+    // Map -> HashMap()
+    //     -> TreeMap()
 
     public static void main(String[] args) {
         // Set does not contain "duplicates"
