@@ -12,6 +12,7 @@ public class CollectionMain {
     //                                -> Queue (I)
     // Map -> HashMap()
     //     -> TreeMap()
+    //     -> TreeMap()
 
     public static void main(String[] args) {
         // Set does not contain "duplicates"

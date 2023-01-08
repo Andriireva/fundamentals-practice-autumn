@@ -10,9 +10,11 @@ public class MapExamples {
         System.out.println("Map is empty: " + stringPersonMap.isEmpty());
         stringPersonMap.put("XXX", new Person("John", 25));
         stringPersonMap.put("YYY", new Person("Sara", 18));
+        stringPersonMap.put("HHHH", new Person("Peter", 51));
         System.out.println("Map is empty: " + stringPersonMap.isEmpty());
         System.out.println("Map size: " + stringPersonMap.size());
         System.out.println("Map contains key: " + stringPersonMap.containsKey("HHHH"));
+        System.out.println("Map get element: " + stringPersonMap.getOrDefault("HHHH", new Person("Default Persoon", 100)));
         stringPersonMap.put("XXX", new Person("Andrii", 15)); // PUT it add or replace value by key
         stringPersonMap.put("TTT", new Person("Andrii", 15));
 

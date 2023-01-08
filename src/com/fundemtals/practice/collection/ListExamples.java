@@ -31,7 +31,10 @@ public class ListExamples {
         anotherNames.add("Alex");
         names.addAll(anotherNames);
         System.out.println("Names after add collection: " + getListElements(names));
-        names.sort(new StringComparator());
+        Comparator<String> stringComparator = (n1, n2) -> n1.compareTo(n2);
+        names.sort(stringComparator.reversed()); // reversed return revers original Comparator
+        System.out.println("Names after reverse order sort: " + getListElements(names));
+        names.sort((n1, n2) -> n1.compareTo(n2));
         System.out.println("Names after sort: " + getListElements(names));
         names.add("Alex");
 
