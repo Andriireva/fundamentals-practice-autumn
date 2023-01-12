@@ -16,4 +16,12 @@ public class Elephant extends Mammal {
     public void setTrunkLength(int trunkLength) {
         this.trunkLength = trunkLength;
     }
+
+    @Override
+    public String toString() {
+        return "Elephant{" +
+                "trunkLength=" + trunkLength +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
