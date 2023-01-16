@@ -17,6 +17,11 @@ public class Dog extends Mammal implements Moveable, SoundAnimal {
         super();
     }
 
+    public Dog(String name, Integer age) {
+        this.name = name;
+        setAge(age);
+    }
+
     public void move(int x, int y) {
         System.out.println("I use my legs to move to " + x + ":" + y);
     }
@@ -48,5 +53,13 @@ public class Dog extends Mammal implements Moveable, SoundAnimal {
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), getSpeed());
+    }
+
+    @Override
+    public String toString() {
+        return "Dog{" +
+                "name='" + name + '\'' +
+                "age='" + getAge() + '\'' +
+                '}';
     }
 }

@@ -22,6 +22,7 @@ public class Elephant extends Mammal {
         return "Elephant{" +
                 "trunkLength=" + trunkLength +
                 ", name='" + name + '\'' +
+                ", age='" + getAge() + '\'' +
                 '}';
     }
 }
