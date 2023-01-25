@@ -2,6 +2,5 @@ cat,Snow,10
 cat,Bella,5
 
 dog,Rex,7
-dog,Faster,10
+dog,FasterDog,7
 elephant,Dumbo,6,66
-elephant,Big One,27,23
