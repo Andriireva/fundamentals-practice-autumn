@@ -1,0 +1,19 @@
+
+1. Do practice. https://leetcode.com/
+1.1. Look on how Algorithms works (search element in collection/array, sorting, etc ) (babel sort, quick sort.... )
+2. SQL data base. ( create tables, select, update, insert, delete )
+2.1. Look on java.sql package. Classes: Connection, Driver, ResultSet...
+2.2. PostgreSQL, MySQL
+3. Learn ONLY 1 programming language
+4. Lean some framework, libraries
+4.1. Java EE ( less popular )
+4.2. Spring (the most popular frame)
+4.3. Library - Hibernate ( JPA ), it SQL related library
+4.4. Unit testing (Junit + mockito)
+4.5. GIT version
+6. Design patterns. Look on GOF (gang of 4) patterns. Example design patterns: Singleton (look on project)
+7. You need to be prepared for interview
+7.1. Know the most popular java questions ( List vs Set, Map works, Regarding String, some design task, OOP (encapsulation, inheritance, polymorphism) )
+7.2. You need to "your" market.
+7.3. English
+8. Be ready that you will fail some step. DON'T leave your dream to become java engineer!!! Look on prev stesp
